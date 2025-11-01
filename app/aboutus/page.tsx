@@ -4,12 +4,31 @@ import { div } from 'framer-motion/client'
 import Link from 'next/link'
 import React from 'react'
 import style from "../main.module.css"
+import { Metadata } from 'next'
 
 const cardWrapper = `relative w-full h-[500px]  rounded-[10px] bg-gradient-to-b from-slate-700 to-slate-950 overflow-hidden hover:scale-105 hover:cursor-pointer hover:before:animate-none`;
 
 const cardWrapperBefore = `before:bg-[conic-gradient(rgba(244,114,182,0.4)_0deg,rgba(192,232,252,0.4)_0deg,transparent_80deg)] before:absolute before:h-[150%] before:w-[150%] before:animate-spin before:left-[-25%] before:top-[-25%] `
 
 const cardContent = `absolute w-[calc(100%-2px)] p-[2em] h-[calc(100%-2px)] top-[1px] left-[1px] z-[1] bg-gradient-to-b from-slate-800 to-slate-900 rounded-[10px] `;
+
+export const metadata: Metadata = {
+  icons:{
+    icon: "/Logo/logo.png",
+  },
+  title: "About - Tamanna Enterprises, Bellary Karnataka",
+  description: `${CompanyName.fullName}, Serves High Speed internet Connections in Bellary, Karnatak`,
+  keywords: [
+    'internet provider Bellary',
+    'high speed internet Bellary',
+    'broadband connections Karnataka',
+    'Tamanna Enterprises services',
+    'best internet service Bellary',
+    'fiber internet Bellary'
+  ],
+  referrer: 'origin-when-cross-origin',
+  
+}
 
 const aboutUs = () => {
   return (

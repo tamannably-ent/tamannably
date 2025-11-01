@@ -2,8 +2,27 @@ import { AvailabilityCheck } from '@/components/AvailabilityCheck';
 import { Hero } from '@/components/Hero';
 import { ServicesGrid } from '@/components/ServiceGrid';
 import { SpeedComparison } from '@/components/SpeedComparision';
-import { HeroProp } from '@/lib/homeContent';
+import { CompanyName, HeroProp } from '@/lib/homeContent';
+import { Metadata } from 'next';
 import React from 'react'
+
+export const metadata: Metadata = {
+  icons:{
+    icon: "/Logo/logo.png",
+  },
+  title: "FTTH service - Tamanna Enterprises, Bellary Karnataka",
+  description: `${CompanyName.fullName}, Serves High Speed internet Connections in Bellary, Karnatak`,
+  keywords: [
+    'internet provider Bellary',
+    'high speed internet Bellary',
+    'broadband connections Karnataka',
+    'Tamanna Enterprises services',
+    'best internet service Bellary',
+    'fiber internet Bellary'
+  ],
+  referrer: 'origin-when-cross-origin',
+  
+}
 
 const getServices = () => [
   {

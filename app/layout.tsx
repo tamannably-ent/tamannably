@@ -25,6 +25,14 @@ const position = {
 export const metadata: Metadata = {
   title: `${CompanyName.fullName}`,
   description: `${CompanyName.fullName}, Serves High Speed internet Connections in Bellary, Karnatak`,
+  keywords: [
+    'internet provider Bellary',
+    'high speed internet Bellary',
+    'broadband connections Karnataka',
+    'Tamanna Enterprises services',
+    'best internet service Bellary',
+    'fiber internet Bellary'
+  ],
 };
 
 export default function RootLayout({

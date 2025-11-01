@@ -39,7 +39,7 @@ const NavBar = () => {
                             alt='Logo'
                             className='h-[48px] w-[120px]'
                         /> */}
-                        <svg width={`60px`} height={`60px`} className={`absolute top-1 ${style.svgLogo}`}>
+                        <svg width={`60px`} height={`60px`} className={`absolute -top-1.5 md:lg:top-1 ${style.svgLogo}`}>
                             {/* <span className='text-4xl font-lato font-extrabold -mt-1.5'>T</span>
                             <span className='text-3xl font-bold font-lato -ml-3 text-shadow-2xs text-shadow-blue-500'>E</span> */}
                             <text x={`50%`} y={`50%`} textAnchor='middle' className={`font-extrabold ${style.textBody}`}>
@@ -57,6 +57,7 @@ const NavBar = () => {
                                 <Link
                                     href={data.href}
                                     aria-current={data.current ? 'page' : undefined}
+                                    onClick={()=>null}
                                     className={classNames(
                                                 data.current ? ' text-amber-500' : 'text-amber-200 hover:bg-slate-700 hover:text-amber-500',
                                                 ' text-sm font-medium',
@@ -79,31 +80,34 @@ const NavBar = () => {
                                                 transition-opacity 
                                                 duration-300 
                                                 ease-in-out
+                                                hover:shadow-2xs
+                                                hover:shadow-slate-950
                                             `}
                                         >
                                             {data.subheading ?
-                                            data.subheading.map((abc,j)=>(
-                                                <div key={j}>
-                                                    <Link
-                                                        href={abc.href}
-                                                    >
-                                                        <div className={`
-                                                                            py-2 
-                                                                            px-8 
-                                                                            hover:text-amber-300 
-                                                                            w-[200px]
-                                                                            before:inset-0
-                                                                            before:bg-gray-700
-                                                                            before:z-[51]
-                                                                        `}
+                                                data.subheading.map((abc,j)=>(
+                                                    <div key={j}>
+                                                        <Link
+                                                            href={abc.href}
+                                                            onClick={()=>null}
                                                         >
-                                                            {abc.service}
-                                                        </div>
-                                                    </Link>
-                                                </div>
-                                            )) 
-                                            
-                                            : null
+                                                            <div className={`
+                                                                                py-2 
+                                                                                px-8 
+                                                                                hover:text-amber-300 
+                                                                                w-[200px]
+                                                                                before:inset-0
+                                                                                before:bg-gray-700
+                                                                                before:z-[51]
+                                                                            `}
+                                                            >
+                                                                {abc.service}
+                                                            </div>
+                                                        </Link>
+                                                    </div>
+                                                )) 
+                                                
+                                                : null
                                             }
                                         </div>
                                     </div>
@@ -137,6 +141,7 @@ const NavBar = () => {
                                         <Link
                                             key={j}
                                             href={d.href}
+                                            onClick={()=>null}
                                         >
                                             <div  className='mx-10 py-1 text-amber-600'>{d.service}</div>
                                         </Link>

@@ -53,7 +53,7 @@ const Header = ({Props}:{Props: HeaderProps}) => {
           <div 
             className='absolute inset-0 top-[10%] font-caprasimo font-extrabold max-w-[80%] text-5xl md:text-7xl text-gray-950 px-10 z-[2]'
           >
-            <svg viewBox="0 0 900 260" className={`${style.svg}`}>
+            <svg viewBox="0 0 1200 260" className={`${style.svg}`}>
                   <text x={`50%`} y={`50%`} dy={`0.32rem`} textAnchor="middle" className={`${style.textBody}`}>
                       {Props.headerText}
                   </text>

@@ -5,7 +5,26 @@ import { FaqSection } from '@/components/FaqSection';
 
 import Image from 'next/image';
 import ContactForm from '@/components/ContactForm';
-import { HeroProp, HeroPropLL } from '@/lib/homeContent';
+import { CompanyName, HeroProp, HeroPropLL } from '@/lib/homeContent';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  icons:{
+    icon: "/Logo/logo.png",
+  },
+  title: "Leasedline services - Tamanna Enterprises, Bellary Karnataka",
+  description: `${CompanyName.fullName}, Serves High Speed internet Connections in Bellary, Karnatak`,
+  keywords: [
+    'internet provider Bellary',
+    'high speed internet Bellary',
+    'broadband connections Karnataka',
+    'Tamanna Enterprises services',
+    'best internet service Bellary',
+    'fiber internet Bellary'
+  ],
+  referrer: 'origin-when-cross-origin',
+  
+}
 
 // This is a Server Component, so you can fetch data directly here.
 const getPricingTiers = () => [

@@ -31,7 +31,7 @@ const ServicesPage = () => {
               />
               <div className="absolute inset-0 bg-black/40 transition duration-300 group-hover:bg-black/80"></div>
               <div  className='absolute bottom-0 left-0 text-white p-10'>
-                <h3 className="text-5xl lg:text-4xl font-bold">{data.title}</h3>
+                <h3 className="text-2xl lg:text-4xl font-bold">{data.title}</h3>
                   <p className="mt-2 text-sm opacity-0 transition duration-300 group-hover:opacity-100">
                     {data.description}
                   </p>

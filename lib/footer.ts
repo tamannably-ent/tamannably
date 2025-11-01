@@ -1,33 +1,33 @@
 export const serviceFooter = [
     {
         service:"FTTH",
-        href:"/ftth",
+        href:"/services/ftth",
         subHeading:[
             {
                 name:"FTTH - Internet services",
-                link:"/ftth"
+                link:"/services/ftth"
             },
             {
                 name:"FTTH - Voice services",
-                link:"/ftth"
+                link:"/services/ftth/ftth"
             },
         ]
     }, 
     {
         service:"Leased Line", 
-        href:"/leasedline", 
+        href:"/services/leasedline", 
         subHeading:[
             {
                 name:"Internet Leased Lines (ILL)",
-                link:"/leasedline"
+                link:"/services/leasedline"
             },
             {
                 name:"KSWAN Circuits",
-                link:"/leasedline"
+                link:"/services/leasedline"
             },
             {
                 name:"Bank Leased Circuits",
-                link:"/leasedline"
+                link:"/services/leasedline"
             },
         ]
     },
@@ -37,7 +37,7 @@ export const serviceFooter = [
         subHeading:[
             {
                 name: "Networks", 
-                link:"/leasedline"
+                link:"/services/leasedline"
             }
         ]
     },

@@ -84,6 +84,15 @@
 .svg text{
   font-size: 4rem;
   stroke-width: 1;
+ 
+}
+@media screen and (max-width: 768px) {
+  .svg{
+    width: 100%;
+  }
+  .svg text{
+    font-size: 6rem;
+  }
 }
 
 .svg text.textBody{

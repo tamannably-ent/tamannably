@@ -43,7 +43,7 @@ export default function Carousel() {
         onClick={prevSlide}
         className="absolute top-1/2 left-4 -translate-y-1/2 bg-white/70 p-2 rounded-full shadow hover:bg-white"
       >
-        <ChevronLeft className="w-6 h-6 cursor-pointer" />
+        <ChevronLeft className="w-4 h-4 md:lg:w-6 md:lg:h-6 cursor-pointer" />
       </button>
 
       {/* Right Arrow */}
@@ -51,7 +51,7 @@ export default function Carousel() {
         onClick={nextSlide}
         className="absolute top-1/2 right-4 -translate-y-1/2 bg-white/70 p-2 rounded-full shadow hover:bg-white"
       >
-        <ChevronRight className="w-6 h-6 cursor-pointer" />
+        <ChevronRight className=" w-4 h-4 md:lg:w-6 md:lg:h-6 cursor-pointer" />
       </button>
 
       {/* Dots */}
@@ -68,10 +68,10 @@ export default function Carousel() {
       </div>
       
       <div className="absolute w-full top-[45%] group-hover:top-4 transform duration-300 text-gray-900 group-hover:bg-gray-800/75 group-hover:text-gray-400 items-center justify-items-center">
-        <h1 className="text-3xl font-semibold py-2">{imageScroll[index].heading}</h1>
+        <h1 className="text-xl md:lg:text-3xl font-semibold py-2">{imageScroll[index].heading}</h1>
       </div>
       <div className="absolute opacity-0 transition duration-300 group-hover:opacity-100 w-full top-[65%] bg-gray-800/75 text-gray-300 text-justify">
-        <p className="text-md p-5">{imageScroll[index].description}</p>
+        <p className="text-xs md:text-lg lg:text-lg p-5">{imageScroll[index].description}</p>
       </div>
     </div>
   );
