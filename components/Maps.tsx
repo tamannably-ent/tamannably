@@ -14,7 +14,7 @@ type latlng = {
     lng: number
 };
 
-const center = {
+let center = {
   lat: 15.143187750194295,
   lng: 76.91600199083364
 };
@@ -23,7 +23,9 @@ const MapComponent = (params: latlng) => {
     
     const {lat, lng} = params;
     // console.log(`from Maps: lat: ${lat} lng:${lng}`);
-    console.log(params)
+    center.lat = lat;
+    center.lng = lng;
+    console.log(center)
 
   const { isLoaded } = useJsApiLoader({
     id: 'google-map-script',
@@ -73,7 +75,7 @@ const MapComponent = (params: latlng) => {
     <div>
       <GoogleMap
         mapContainerStyle={containerStyle}
-        center={params.latlng ? params.latlng : center}
+        center={center}
         zoom={5}
         onLoad={onLoad}
         onUnmount={onUnmount}
