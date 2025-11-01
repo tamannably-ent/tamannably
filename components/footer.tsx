@@ -6,13 +6,7 @@ import ConnectPage from './connectUs'
 
 
 type FooterProps = {
-    services: {
-      service: string,
-      href: string,
-      subHeading: [{
-        name: string
-      }]
-    }[],
+    services: any[],
     connect: any[]
 }
 
