@@ -6,13 +6,19 @@ import ConnectPage from './connectUs'
 
 
 type FooterProps = {
-    services: any,
-    connect: any
+    services: {
+      service: string,
+      href: string,
+      subHeading: [{
+        name: string
+      }]
+    }[],
+    connect: any[]
 }
 
 const Footer:React.FC<FooterProps> = ({services, connect}) => {
-  const count = services.length;
-  console.log(count)
+  // const count = services.length;
+  // console.log(count)
   return (
     <div className='bg-slate-900 text-gray-400 '>
       
