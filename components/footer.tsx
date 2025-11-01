@@ -4,12 +4,20 @@ import { div } from 'framer-motion/client'
 import React from 'react'
 import ConnectPage from './connectUs'
 
+type subHeading = {
+  name: string,
+  href: string
+}
+
+type ServiceFooter = {
+  service: string,
+  href: string,
+  subHeading: subHeading[]
+}
 
 type FooterProps = {
-    services: any[],
-    connect: [{
-      mobile: string
-    }]
+    services: ServiceFooter[],
+    connect: { mobile: string; social: string; }[]
 }
 
 const Footer:React.FC<FooterProps> = ({services, connect}) => {
