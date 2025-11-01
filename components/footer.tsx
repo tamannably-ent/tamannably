@@ -7,7 +7,9 @@ import ConnectPage from './connectUs'
 
 type FooterProps = {
     services: any[],
-    connect: any[]
+    connect: [{
+      mobile: string
+    }]
 }
 
 const Footer:React.FC<FooterProps> = ({services, connect}) => {
