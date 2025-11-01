@@ -31,7 +31,7 @@ export const serviceFooter = [
     {
         service:"Networking Services", 
         href:"/#", 
-        subHeading:null
+        subHeading:[{name: "Networks"}]
     },
     
 ]

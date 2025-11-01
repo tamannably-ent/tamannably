@@ -6,7 +6,7 @@ import ConnectPage from './connectUs'
 
 type subHeading = {
   name: string,
-  href: string
+  link: string
 }
 
 type ServiceFooter = {
