@@ -151,7 +151,7 @@ const contactPage = () => {
             name="latitude"
             rules={[{required: false, message:"Please input Latitude (optional)"}]}
           >
-            <Input prefix={<FaMapPin className='site-form-item-icon' />} placeholder='Latitude' size='large' onChange={(e)=>setLat((e.target.value))}/>
+            <Input prefix={<FaMapPin className='site-form-item-icon' />} placeholder='Latitude' size='large' onChange={(e)=>setLat(Number(e.target.value))}/>
 
           </Form.Item>
 
@@ -159,7 +159,7 @@ const contactPage = () => {
             name="longitude"
             rules={[{required: false, message:"Please input Longitude (optional)"}]}
           >
-            <Input prefix={<FaMapPin className='site-form-item-icon' />} placeholder='Longitude' size='large' onChange={(e)=>setLng((e.target.value))}/>
+            <Input prefix={<FaMapPin className='site-form-item-icon' />} placeholder='Longitude' size='large' onChange={(e)=>setLng(Number(e.target.value))}/>
 
           </Form.Item>
           <Form.Item>
