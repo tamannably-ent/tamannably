@@ -32,7 +32,9 @@ const Footer:React.FC<FooterProps> = ({services, connect}) => {
           <div key={i}>
             {d.service}
             {d.subHeading ? d.subHeading.map((data,j) => (
-              <div key={j}>{data.name}</div>
+              <div key={j}>
+                <a href={data.link}>{data.name}</a>
+              </div>
             )): null }
           </div>
           

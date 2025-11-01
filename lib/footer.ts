@@ -18,20 +18,28 @@ export const serviceFooter = [
         href:"/leasedline", 
         subHeading:[
             {
-                name:"Internet Leased Lines (ILL)"
+                name:"Internet Leased Lines (ILL)",
+                link:"/leasedline"
             },
             {
-                name:"KSWAN Circuits"
+                name:"KSWAN Circuits",
+                link:"/leasedline"
             },
             {
-                name:"Bank Leased Circuits"
+                name:"Bank Leased Circuits",
+                link:"/leasedline"
             },
         ]
     },
     {
         service:"Networking Services", 
         href:"/#", 
-        subHeading:[{name: "Networks"}]
+        subHeading:[
+            {
+                name: "Networks", 
+                link:"/leasedline"
+            }
+        ]
     },
     
 ]
