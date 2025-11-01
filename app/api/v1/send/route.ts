@@ -13,7 +13,7 @@ export async function POST(req: NextRequest) {
         const bodyMessage = `${message} https://www.google.com/maps/@${latitude},${longitude},17z`
         const { data, error } = await resend.emails.send({
             from: 'Contact Form <onboarding@resend.dev>',
-            to: 'rsucantbly@gmail.com',
+            to: 'tamannably@gmail.com',
             subject: subject || 'New Contact Form Submission',
             replyTo: email,
             headers: {

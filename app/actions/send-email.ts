@@ -32,10 +32,26 @@ export async function sendEmailAction(prevState: FormState, formData: FormData):
   const { name, email, message } = validation.data;
 
   try {
-    const emailHtml = render(
-      <ContactEmail name={name} email={email} message={message} />
-    );
-
+    // const emailHtml = render(
+    //   // <ContactEmail name={name} email={email} message={message} />
+      
+    // );
+    const emailHtml = `<Html lang="en">
+      <Head />
+      <Preview>New message from your contact form</Preview>
+      <Body style={{ fontFamily: 'sans-serif' }}>
+        <Container style={{ padding: '20px', border: '1px solid #ddd' }}>
+          <Section>
+            <Text><strong>Name:</strong> ${name}</Text>
+            <Text><strong>Email:</strong> ${email}</Text>
+            <Hr />
+            <Text><strong>Message:</strong></Text>
+            <Text>${message}</Text>
+          </Section>
+        </Container>
+      </Body>
+    </Html>`
+    
     await resend.emails.send({
       from: process.env.RESEND_SENDER_EMAIL!,
       to: process.env.RESEND_RECEIVER_EMAIL!,
