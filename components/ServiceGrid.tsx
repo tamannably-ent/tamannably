@@ -13,7 +13,7 @@ export function ServicesGrid({ services }: { services: Service[] }) {
   return (
     <section className="container mx-auto py-16">
       <h2 className="text-center text-4xl font-bold">Our Services</h2>
-      <p className="text-center text-lg text-gray-600 mt-4 mb-12">
+      <p className="text-center text-lg text-muted-foreground mt-4 mb-12">
         A fiber connection is a gateway to endless possibilities.
       </p>
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
@@ -31,10 +31,10 @@ export function ServicesGrid({ services }: { services: Service[] }) {
               height={300}
               className="object-fill transition duration-300 group-hover:scale-110 z-auto"
             />
-            <div className="absolute inset-0 bg-black/40 transition duration-300 group-hover:bg-black/60"></div>
-            <div className="absolute bottom-0 left-0 p-6 text-white">
-              <h3 className="text-2xl font-bold">{service.title}</h3>
-              <p className="mt-2 text-sm opacity-0 transition duration-300 group-hover:opacity-100">
+            <div className="absolute inset-0 bg-popover/40 transition duration-300 group-hover:bg-background/60"></div>
+            <div className="absolute bottom-0 left-0 p-6 text-primary">
+              <h3 className="text-2xl md:text-lg font-semibold text-wrap">{service.title}</h3>
+              <p className="mt-2 text-sm opacity-0 transition duration-300 group-hover:opacity-100 sm:opacity-100">
                 {service.description}
               </p>
             </div>

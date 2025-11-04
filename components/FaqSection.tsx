@@ -30,7 +30,7 @@ export function FaqSection() {
       <h2 className="text-center text-4xl font-bold">Frequently Asked Questions</h2>
       <div className="mt-12 space-y-6">
         {faqs.map((faq, index) => (
-          <div key={index} className="rounded-lg bg-white p-6 shadow-md">
+          <div key={index} className="rounded-lg bg-background-secondary p-6 shadow-md">
             <button
               className="flex w-full items-center justify-between text-left"
               onClick={() => toggleFaq(index)}
@@ -53,7 +53,7 @@ export function FaqSection() {
                   transition={{ duration: 0.3, ease: 'easeInOut' }}
                   className="mt-4 overflow-hidden"
                 >
-                  <p className="text-gray-700">{faq.answer}</p>
+                  <p className="text-muted-foreground">{faq.answer}</p>
                 </motion.div>
               )}
             </AnimatePresence>

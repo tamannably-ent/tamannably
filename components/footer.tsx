@@ -24,7 +24,7 @@ const Footer:React.FC<FooterProps> = ({services, connect}) => {
   // const count = services.length;
   // console.log(count)
   return (
-    <div className='bg-slate-900 text-gray-400 '>
+    <div className='bg-background shadow-upwards-mode text-primary '>
       
       {/* <div className={`grid grid-cols-${count+1} gap-2 p-5`}> */}
       <div className='flex flex-col place-it align-middle lg:flex-row gap-2 p-10 py-5 lg:mx-auto lg:justify-around'>
@@ -47,10 +47,10 @@ const Footer:React.FC<FooterProps> = ({services, connect}) => {
           ))}
         </div>
       </div>
-      <div className='bg-slate-700'>
+      <div className='bg-footer-secondary shadow-upwards-mode'>
         <ConnectPage />
       </div>
-      <div className='mx-auto text-center text-white'>
+      <div className='mx-auto text-center text-primary'>
         <p>@2025 {CompanyName.fullName}, All Rights Reserved</p>
       </div>
     </div>

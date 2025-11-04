@@ -57,7 +57,7 @@ export default function LeasedLinePage() {
   const heroProp = HeroPropLL();
 
   return (
-    <main className="flex min-h-screen flex-col items-center bg-gray-50 text-gray-800">
+    <main className="flex min-h-screen flex-col items-center bg-background text-primary">
       {/* Hero Section (Server Component) */}
       <Hero Prop={heroProp} />
 

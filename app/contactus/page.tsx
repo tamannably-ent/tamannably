@@ -101,11 +101,11 @@ const contactPage = () => {
   };
 
   return (
-    <div className='max-w-4xl w-full space-y-8 bg-gray-900 p-10 rounded-xl shadow-2xl mx-auto mt-[100px]'>
+    <div className='max-w-4xl w-full space-y-8 bg-background border-2 border-muted p-10 rounded-xl shadow-2xl mx-auto mt-[100px]'>
 
       <div>
-        <h2 className='mt-1 text-center text-3xl font-extrabold text-gray-300'>Get in Touch</h2>
-        <p className='mt-1 mb-4 text-center text-sm text-gray-400'>
+        <h2 className='mt-1 text-center text-3xl font-extrabold text-primary'>Get in Touch</h2>
+        <p className='mt-1 mb-4 text-center text-sm text-primary'>
             I'd love to hear from you! Fill out the form below to get in touch.
         </p>
 
@@ -174,7 +174,8 @@ const contactPage = () => {
           </Form.Item>
         </Form>
       </div>
-      <main className="flex min-h-screen flex-col items-center justify-between p-5 text-gray-800">
+      {/* implementing google maps. */}
+      <main className="hidden flex min-h-screen flex-col items-center justify-between p-5 text-gray-800">
       <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm">
         <h1 className="text-4xl font-bold text-center mb-8">
           Get Address from Map

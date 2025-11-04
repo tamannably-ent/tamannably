@@ -21,6 +21,8 @@
   --font-lato: "Lato", sans-serif;
   --font-caprasimo: "Caprasimo", sans-serif;
 
+  
+
   @keyframes scrollX {
     from {
       transform: translateX(0);
@@ -54,7 +56,7 @@
   --animate-spinRight: spinRight 7s linear infinite;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
@@ -63,7 +65,7 @@
     --fill-logo-color-1: #0a0a0c;
     --fill-logo-color-2: #D4AF37;
   }
-}
+} */
 
 body {
   background: var(--background);
@@ -72,6 +74,7 @@ body {
 }
 @theme inline {
   --color-background: var(--background);
+  --color-background-secondary: var(--background-secondary);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
@@ -108,15 +111,30 @@ body {
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+  --color-anchor-text: var(--anchor-text);
+
+  --shadow-light: var(--shadow-light);
+  --shadow-dark: var(--shadow-dark);
+  --color-footer-secondary: var(--footer-secondary);
+  --color-navbar: var(--navbar);
+
+  --color-gradient-color1: var(--gradient-color1);
+  --color-gradient-color2: var(--gradient-color1);
+
+  --color-gradient-glass: var(--gradient-glass);
+
+  --color-gradient-content: var(--gradient-content);
+
 }
 
 :root {
   --radius: 0.625rem;
   --background: oklch(1 0 0);
+  --background-secondary: oklch(94.007% 0.00011 271.152 / 0.9);
   --foreground: oklch(0.129 0.042 264.695);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.129 0.042 264.695);
-  --popover: oklch(1 0 0);
+  --popover: oklch(83.455% 0.04549 275.634);
   --popover-foreground: oklch(0.129 0.042 264.695);
   --primary: oklch(0.208 0.042 265.755);
   --primary-foreground: oklch(0.984 0.003 247.858);
@@ -143,11 +161,38 @@ body {
   --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
   --sidebar-border: oklch(0.929 0.013 255.508);
   --sidebar-ring: oklch(0.704 0.04 256.788);
+
+  --anchor-text: oklch(40.939% 0.1872 262.701);
+  --shadow-light: oklch(0% 0 0 / 0.1);  /* Black with 10% opacity */
+  --shadow-dark: oklch(0% 0 0 / 0.05); /* Black with 5% opacity */
+
+  --footer-secondary: oklch(89.865% 0.01402 258.447);
+  --navbar: oklch(89.865% 0.01402 258.447);
+
+  --gradient-color1: oklch(92.494% 0.00011 271.152);
+  --gradient-color2: oklch(98.511% 0.00011 271.152);
+
+  --gradient-content: linear-gradient(
+    120deg,
+    oklch(92.494% 0.00011 271.152),
+    oklch(98.511% 0.00011 271.152)
+  );
+
+  --gradient-glass: linear-gradient(
+    135deg,
+    hsl(220 27% 8% / 0.4),
+    hsl(220 27% 8% / 0.1)
+  );
+  
+
 }
 
 .dark {
-  --background: oklch(0.129 0.042 264.695);
-  --foreground: oklch(0.984 0.003 247.858);
+  /* --background: oklch(0.129 0.042 264.695); */
+  --background: oklch(11% 0.02 242);
+  /* --foreground: oklch(0.984 0.003 247.858); */
+  --background-secondary: oklch(18.264% 0.00204 286.052 / 0.9);
+  --foreground: oklch(99% 0.01 242);
   --card: oklch(0.208 0.042 265.755);
   --card-foreground: oklch(0.984 0.003 247.858);
   --popover: oklch(0.208 0.042 265.755);
@@ -177,9 +222,33 @@ body {
   --sidebar-accent-foreground: oklch(0.984 0.003 247.858);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.551 0.027 264.364);
+  --shadow-light: oklch(100% 0 0 / 0.05); /* White with 5% opacity */
+  --shadow-dark: oklch(100% 0 0 / 0.02); /* White with 2% opacity */
+
+  --footer-secondary: oklch(37.2% 0.044 257.287);
+  --navbar: oklch(24.634% 0.00884 255.648);
+
+  --gradient-color1: oklch(8.117% 0.01935 242.232);
+  --gradient-color2: oklch(43.529% 0.00167 285.893);
+
+  --gradient-content: linear-gradient(
+    0deg,
+    oklch(8.117% 0.01935 242.232),
+    oklch(43.529% 0.00167 285.893)
+  );
+
+  --gradient-glass: linear-gradient(
+    135deg,
+    hsla(220, 8%, 72%, 0.4),
+    hsla(213, 31%, 94%, 0.1)
+  );
+
 } 
 
  @layer base {
+  /* :root{
+    color-scheme: dark;
+  } */
   * {
      @apply border-border outline-ring/50; 
   }
@@ -199,7 +268,7 @@ body {
   }
 
   .card-heading{
-    @apply relative w-[100%] h-[150px] rounded-[10px] bg-gradient-to-r from-slate-900 to-slate-800 overflow-hidden hover:cursor-pointer hover:shadow-[0_0_3px_theme('colors.slate.200'),0_0_10px_theme('colors.slate.700')] transition-all duration-300
+    @apply relative w-[100%] h-[150px] rounded-[10px] bg-gradient-to-r from-background to-background-secondary overflow-hidden hover:cursor-pointer hover:shadow-[0_0_3px_theme('colors.slate.200'),0_0_10px_theme('colors.slate.700')] transition-all duration-300
 
   }
 
@@ -227,11 +296,11 @@ body {
   }
 
   .card-content{
-    @apply absolute w-[calc(100%-2px)] h-[calc(100%-2px)] top-[1px] left-[1px] hover:w-[calc(100%-4px)] hover:h-[calc(100%-4px)] hover:top-[2px] hover:left-[2px] p-5 py-5 bg-gradient-to-r from-slate-900 to-slate-800 rounded-[10px]
+    @apply absolute w-[calc(100%-2px)] h-[calc(100%-2px)] top-[1px] left-[1px] hover:w-[calc(100%-4px)] hover:h-[calc(100%-4px)] hover:top-[2px] hover:left-[2px] p-5 py-5 bg-gradient-to-br from-gradient-color1 via-primary-foreground to-gradient-color2  rounded-[10px]
   }
 
   .card-heading-content{
-    @apply absolute w-[calc(100%-2px)] h-[calc(100%-2px)] top-[1px] left-[1px] hover:w-[calc(100%-4px)] hover:h-[calc(100%-4px)] hover:top-[2px] hover:left-[2px] p-5 py-5 bg-gradient-to-br from-slate-900 to-slate-800 rounded-[10px]
+    @apply absolute w-[calc(100%-2px)] h-[calc(100%-2px)] top-[1px] left-[1px] hover:w-[calc(100%-4px)] hover:h-[calc(100%-4px)] hover:top-[2px] hover:left-[2px] p-5 py-5 bg-gradient-to-br from-gradient-color1 to-gradient-color2 rounded-[10px]
   }
 
   .marker{
@@ -246,7 +315,7 @@ body {
     @apply absolute w-[20px] h-[20px] rounded-full bg-gradient-to-br from-slate-300 to-slate-500
   }
   .marker span::before{
-    @apply absolute content-[''] w-[calc(100%-4px)] h-[calc(100%-4px)] left-[2px] top-[2px] rounded-full bg-gray-900
+    @apply absolute content-[''] w-[calc(100%-4px)] h-[calc(100%-4px)] left-[2px] top-[2px] rounded-full bg-background
   }
   .marker span:nth-child(1){
     @apply lg:left-[calc(100%/4-100%/8)]
@@ -259,5 +328,17 @@ body {
   }
    .marker span:nth-child(4){
     @apply left-[calc(100%/4-100%/8+75%)]
+  }
+
+  .shadow-upwards-mode{
+
+    box-shadow: 0 -10px 15px -3px var(--shadow-light),
+                0 -4px 6px -2px var(--shadow-dark);
+  }
+
+  .shadow-downwards-mode{
+
+    box-shadow: 0 10px 15px -3px var(--shadow-light),
+                0 4px 6px -2px var(--shadow-dark);
   }
 }

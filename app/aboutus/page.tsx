@@ -32,7 +32,7 @@ export const metadata: Metadata = {
 
 const aboutUs = () => {
   return (
-     <div className='relative flex flex-col gap-4 py-20 p-5 text-white '>
+     <div className='relative flex flex-col gap-4 py-20 p-5 text-primary '>
         <div className='marker '>
             <span className=' '></span>
             <span></span>

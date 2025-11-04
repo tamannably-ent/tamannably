@@ -3,7 +3,7 @@ export const CompanyName = {
     tagLine: "Experience lightning-fast internet.",
     logo:"/images/logo.png",
     address:"",
-    email:"tamannaenterprises@gmail.com",
+    email:"tamannably@gmail.com",
     city:"Bellary",
 }
 

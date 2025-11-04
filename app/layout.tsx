@@ -6,6 +6,7 @@ import Footer from "@/components/footer";
 import { connectFooter, serviceFooter } from "@/lib/footer";
 import { CompanyName, ContactDetails } from "@/lib/homeContent";
 import SocialMedia from "@/components/socialMedia";
+import { ThemeProvider } from "@/components/theme-provider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,7 +20,7 @@ const geistMono = Geist_Mono({
 
 const position = {
   grid: 'grid-cols-1 md:grid-cols-1 lg:grid-cols-1',
-  size: "h-[28px] w-[28px]"
+  size: "h-[16px] w-[16px]"
 }
 
 export const metadata: Metadata = {
@@ -41,22 +42,29 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className="fixed top-0 z-50 mx-auto w-full shadow-2xl shadow-slate-600 bg-slate-950 py-3">
-          <NavBar />
-        </div>
-        <div className="py-10 bg-slate-950 shadow-2xl shadow-slate-600">
-          {children}
-        </div>
-        <div className="fixed right-0 top-[40%] bg-amber-400/50 p-5 rounded-md opacity-20 hover:opacity-100 hover:transition-opacity z-50">
-          <SocialMedia ContactDetails={ContactDetails} position={position} />
-        </div>
-        <div>
-          <Footer services={serviceFooter} connect={connectFooter} />
-        </div>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <div className="shadow-downwards-mode">
+            <NavBar />
+          </div>
+          <div className="py-5 bg-background shadow-2xl shadow-slate-600">
+            {children}
+          </div>
+          <div className="fixed right-0 top-[40%] bg-amber-400/50 p-5 rounded-md opacity-20 hover:opacity-100 hover:transition-opacity z-50">
+            <SocialMedia ContactDetails={ContactDetails} position={position} />
+          </div>
+          <div>
+            <Footer services={serviceFooter} connect={connectFooter} />
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );

@@ -46,7 +46,7 @@ export function AvailabilityCheck() {
   };
 
   return (
-    <section id="availability" className="w-full bg-gray-800 py-16 text-white">
+    <section id="availability" className="w-full bg-background-secondary shadow-2xs py-16 text-primary">
       <div className="container mx-auto px-4 text-center">
         <h2 className="text-4xl font-bold">Check Your Availability</h2>
         <p className="mt-4 text-lg">

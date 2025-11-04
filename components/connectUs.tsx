@@ -29,7 +29,7 @@ const ConnectPage = () => {
       <p className='text-center font-extrabold text-xl pb-5'>
         {CompanyName.email}
       </p>
-      <p className="text-center text-gray-900 dark:text-gray-300 mb-5 text-lg/snug md:lg:text-lg px-5">
+      <p className="text-center text-secondary-foreground mb-5 text-lg/snug md:lg:text-lg px-5">
         Reach out through any of the platforms below — we’re always ready to assist you.
       </p>
 

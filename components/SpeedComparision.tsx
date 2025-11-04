@@ -13,10 +13,10 @@ export function SpeedComparison() {
   const [selectedSpeed, setSelectedSpeed] = useState(speeds[0]);
 
   return (
-    <section className="bg-white py-16">
+    <section className="bg-background py-16">
       <div className="container mx-auto text-center">
         <h2 className="text-4xl font-bold">See the Speed Difference</h2>
-        <p className="mt-4 text-lg text-gray-600">
+        <p className="mt-4 text-lg text-muted-foreground">
           Compare our lightning-fast fiber speeds with traditional connections.
         </p>
 
@@ -36,7 +36,7 @@ export function SpeedComparison() {
           ))}
         </div>
 
-        <div className="relative mt-12 h-64 overflow-hidden rounded-xl bg-gray-100 p-8 shadow-inner">
+        <div className="relative mt-12 h-64 overflow-hidden rounded-xl bg-popover p-8 shadow-inner">
           <AnimatePresence mode="wait">
             <motion.div
               key={selectedSpeed.type}

@@ -51,7 +51,7 @@ const FtthPage = () => {
     const services = getServices();
     const heroProp = HeroProp();
   return (
-    <main className="flex min-h-screen flex-col items-center bg-gray-50 text-gray-800 my-[50px]">
+    <main className="flex min-h-screen flex-col items-center bg-background text-primary my-[50px]">
       {/* Hero Section (Server Component) */}
       <Hero Prop={heroProp} />
 

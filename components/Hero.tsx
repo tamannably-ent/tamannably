@@ -36,7 +36,7 @@ export function Hero({ Prop }: { Prop: HeroProps[] }) {
 
       <div className="relative h-[600px] w-full">
         {Prop.map((data, index)=>(
-          <div className='h-[600px] after:inset-0 after:w-full after:h-full after:absolute after:bg-slate-950/80 after:z-[1]'>
+          <div className='h-[600px] after:inset-0 after:w-full after:h-full after:absolute after:bg-muted/80 after:z-[1]'>
             <video autoPlay loop muted className="absolute w-full h-full top-0 left-0 object-cover ">
               <source src={data.vidSrc} type='video/mp4' />
               <source src={data.vidSrc} type='video/webm'/>
@@ -48,7 +48,7 @@ export function Hero({ Prop }: { Prop: HeroProps[] }) {
               className="object-cover z-[-1]"
               // priority
             />
-            <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
+            <div className="absolute inset-0 flex flex-col items-center justify-center text-primary">
               <h1 className="text-5xl font-bold md:text-7xl z-[3]">
                  
                 {data.heading}
