@@ -34,20 +34,24 @@ const NavBar = () => {
                     </DisclosureButton>
                 </div>
                 {/* <div className='flex flex-1 justify-between items-center md:justify-center'> */}
-                    <div  className=" md:w-[120px] relative flex items-center justify-center shrink-0 w-[80%] ">
+                    <div  className="md:w-[120px] relative flex items-center justify-center shrink-0 w-[80%] ">
                         {/* <img 
                             src={" "}
                             alt='Logo'
                             className='h-[48px] w-[120px]'
                         /> */}
-                        <svg width={`60px`} height={`60px`} className={`${style.svgLogo}`}>
+                        {/* <svg width={`60px`} height={`60px`} className={`${style.svgLogo}`}>
                             <text x={`50%`} y={`50%`} textAnchor='middle' className={`font-extrabold ${style.textBody}`}>
                                 T
                             </text>
                             <text x={`50%`} y={`50%`} dx={`0.5rem`} textAnchor='middle' className={`${style.textBody}`}>
                                 E
                             </text>
-                        </svg>
+                        </svg> */}
+                        <div className='relative h-full'>
+                            <span className='absolute text-2xl -top-5.5 bg-gradient-to-br font-bold from-green-400 via-purple-700 to-blue-500 !bg-clip-text text-transparent z-20 text-shadow-xs '>TAMANNA</span>
+                            <span className='absolute text-xs mx-4 z-10'>ENTERPRISES</span>
+                        </div>
                     </div>
                     {/* </div> */}
                 <div className='hidden sm:block'>               

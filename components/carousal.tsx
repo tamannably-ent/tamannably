@@ -41,7 +41,7 @@ export default function Carousel() {
       {/* Left Arrow */}
       <button
         onClick={prevSlide}
-        className="absolute top-1/2 left-4 -translate-y-1/2 bg-white/70 p-2 rounded-full shadow hover:bg-white"
+        className="absolute top-1/2 left-4 -translate-y-1/2 bg-white/70 p-2 rounded-full shadow hover:bg-white z-50"
       >
         <ChevronLeft className="w-4 h-4 md:lg:w-6 md:lg:h-6 cursor-pointer" />
       </button>
@@ -49,13 +49,13 @@ export default function Carousel() {
       {/* Right Arrow */}
       <button
         onClick={nextSlide}
-        className="absolute top-1/2 right-4 -translate-y-1/2 bg-white/70 p-2 rounded-full shadow hover:bg-white"
+        className="absolute top-1/2 right-4 -translate-y-1/2 bg-white/70 p-2 rounded-full shadow hover:bg-white z-50"
       >
         <ChevronRight className=" w-4 h-4 md:lg:w-6 md:lg:h-6 cursor-pointer" />
       </button>
 
       {/* Dots */}
-      <div className="absolute bottom-4 w-full flex justify-center space-x-2">
+      <div className="absolute bottom-4 w-full flex justify-center space-x-2 z-50">
         {imageScroll.map((_, i) => (
           <button
             key={i}
@@ -67,11 +67,11 @@ export default function Carousel() {
         ))}
       </div>
       
-      <div className="absolute w-full top-[45%] group-hover:top-4 transform duration-300 text-gray-900 group-hover:bg-gray-800/75 group-hover:text-gray-400 items-center justify-items-center">
+      <div className="absolute w-full top-4 md:lg:top-[45%] md:lg:group-hover:top-4 transform duration-300 text-foreground group-hover:bg-background/75 group-hover:text-foreground items-center justify-items-center">
         <h1 className="text-xl md:lg:text-3xl font-semibold py-2">{imageScroll[index].heading}</h1>
       </div>
-      <div className="absolute opacity-0 transition duration-300 group-hover:opacity-100 w-full top-[65%] bg-gray-800/75 text-gray-300 text-justify">
-        <p className="text-xs md:text-lg lg:text-lg p-5">{imageScroll[index].description}</p>
+      <div className="absolute opacity-100 top-[50%]  md:lg:opacity-0 transition duration-300 group-hover:opacity-100 md:lg:w-full md:lg:top-[65%] bg-background/75 text-foreground text-justify">
+        <p className="text-[10px] text-center flex md:text-lg lg:text-lg p-5">{imageScroll[index].description}</p>
       </div>
     </div>
   );

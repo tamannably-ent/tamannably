@@ -16,11 +16,14 @@ export const metadata: Metadata = {
   description: `${CompanyName.fullName}, Serves High Speed internet Connections in Bellary, Karnatak`,
   keywords: [
     'internet provider Bellary',
+    'BSNL internet services in bellary karnataka',
+    'BSNL leased line services in bellary karnataka',
     'high speed internet Bellary',
-    'broadband connections Karnataka',
+    'broadband connections in bellary Karnataka',
     'Tamanna Enterprises services',
     'best internet service Bellary',
-    'fiber internet Bellary'
+    'fiber internet Bellary',
+    'dedicated internet services in bellary karnataka',
   ],
   referrer: 'origin-when-cross-origin',
   
