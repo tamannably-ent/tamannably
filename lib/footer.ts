@@ -9,7 +9,7 @@ export const serviceFooter = [
             },
             {
                 name:"FTTH - Voice services",
-                link:"/services/ftth/ftth"
+                link:"/services/ftth"
             },
         ]
     }, 
